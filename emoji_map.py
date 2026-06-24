@@ -1,4 +1,4 @@
-# Mapping each of the 27 GoEmotions labels to one of 13 output groups
+# Mapping each of the 27 GoEmotions labels to an output group
 
 MERGE_MAP = {
     "joy":"joy", "excitement":"joy", "amusement":"joy",
@@ -18,18 +18,18 @@ MERGE_MAP = {
 
 # Two intensity tiers per output group: [low, high]
 EMOJI_TIERS = {
-    "joy":[1, 2],
-    "love":[1, 2],
-    "gratitude":[1, 2],
-    "admiration":[1, 2],
-    "surprise":[1, 2],
-    "sadness":[1, 2],
-    "anger":[1, 2],
-    "fear":[1, 2],
-    "disgust":[1, 2],
-    "confusion":[1, 2],
-    "desire":[1, 2],
-    "neutral":[1, 2]
+    "joy":['1', '2'],
+    "love":['1', '2'],
+    "gratitude":['1', '2'],
+    "admiration":['1', '2'],
+    "surprise":['1', '2'],
+    "sadness":['1', '2'],
+    "anger":['1', '2'],
+    "fear":['1', '2'],
+    "disgust":['1', '2'],
+    "confusion":['1', '2'],
+    "desire":['1', '2'],
+    "neutral":['1', '2']
 }
 
 THRESHOLDS = {label: 0.3 for label in MERGE_MAP}
