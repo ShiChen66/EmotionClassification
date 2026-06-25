@@ -8,15 +8,12 @@ MODEL_NAME = "roberta-base"
 OUTPUT_DIR = './model_output'
 NUM_LABELS = 28
 
-# Load dataset
 dataset = load_dataset('google-research-datasets/go_emotions', 'simplified')
 print('Dataset loaded')
 label_names = dataset['train'].features['labels'].feature.names
 
-# Tokenizer
 tokenizer = RobertaTokenizerFast.from_pretrained(MODEL_NAME)
 
-# Tokenize
 def tokenize(batch):
     tokens = tokenizer(batch['text'], truncation=True, padding='max_length', max_length=128)
     tokens['labels'] = [
@@ -49,7 +46,6 @@ class EmotionDataset(Dataset):
 train_dataset = EmotionDataset(tokenized['train'])
 val_dataset = EmotionDataset(tokenized['validation'])
 
-# Model
 model = RobertaForSequenceClassification.from_pretrained(
     MODEL_NAME,
     num_labels=NUM_LABELS,

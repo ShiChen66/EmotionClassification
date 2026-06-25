@@ -1,0 +1,44 @@
+# ── Model output ──────────────────────────────────────────────
+# Trained model weights and checkpoints — push to HuggingFace Hub instead
+model_output/
+
+# ── Python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment
+venv/
+env/
+.env/
+.venv/
+
+# ── HuggingFace cache ──────────────────────────────────────────
+# Local dataset and model download cache — large and recreatable
+.cache/
+
+# ── Jupyter / notebooks ───────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── OS files ──────────────────────────────────────────────────
+# Windows
+Thumbs.db
+desktop.ini
+
+# macOS
+.DS_Store
+
+# ── Secrets ───────────────────────────────────────────────────
+# Never commit tokens or keys
+.env
+*.env
+secrets.txt
+hf_token.txt
+
+# ── Logs and temp files ───────────────────────────────────────
+*.log
+runs/
+wandb/
